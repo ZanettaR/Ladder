@@ -3,8 +3,16 @@
 ## Set Up Environment
 
 ### Rails
-1. After cloning the repo, cd into the ladder folder and run `gem install bundle` if you haven't already.
-2. Run `bundle install` to install the required gems.
+
+Make sure you have ruby version 2.4.0.
+
+Then install ruby version 2.4.0 with the following commmand `rvm install ruby-2.4.0`
+
+If you do not have rvm, install RVM `\curl -sSL https://get.rvm.io | bash -s stable --ruby` then run the previous commmand again.
+
+After cloning the repo, cd into the ladder folder and run `gem install bundle` if you haven't already.
+
+Run `bundle install` to install the required gems.
 
 
 **Run Rails Locally**: 
