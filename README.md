@@ -5,7 +5,7 @@
 ### RAILS
 **Run Rails Locally**: ` rails s`
 
-**View The App Live**
+**View The App Locally**
 Go to http://localhost:3000
 
 ### Postgres
