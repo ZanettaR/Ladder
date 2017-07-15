@@ -4,7 +4,7 @@
 
 ### Rails
 1. After cloning the repo, cd into the ladder folder and run `gem install` if you haven't already.
-2. Run `bundle install' to install the required gems.
+2. Run `bundle install` to install the required gems.
 
 
 **Run Rails Locally**: 
