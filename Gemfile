@@ -16,6 +16,10 @@ gem 'rails', '~> 5.0.3'
 gem 'sass-rails', '~> 5.0' # Use SCSS for stylesheets
 gem 'turbolinks', '~> 5' # Turbolinks makes navigating your application faster.
 gem 'uglifier', '>= 1.3.0' # Use Uglifier as compressor for JavaScript assets
+gem 'therubyracer'  # If using Ruby
+gem 'jquery-rails'  # If using Bootstrap's JS plugins.
+gem 'less-rails-bootstrap'
+
 
 group :development, :test do
   gem 'better_errors'
