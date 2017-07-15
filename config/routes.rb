@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'homepages/landing'
+  root 'homepages#landing'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
