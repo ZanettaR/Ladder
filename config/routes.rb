@@ -15,4 +15,5 @@ Rails.application.routes.draw do
 
   resources :interests, only: [:create, :destroy]
   resources :specialties, only: [:create, :destroy]
+  get "/feed" => "users#feed", as: :users_feed
 end
