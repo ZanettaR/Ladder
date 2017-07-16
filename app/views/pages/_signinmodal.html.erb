@@ -1,0 +1,38 @@
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+<%= stylesheet_link_tag    'signin', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div align="center" class="modal-bosy">
+        <div class="modal-header">
+          <h4 class="modal-title">Sign Up</h4>
+          <p class="info">Hold up! You have to create a profile before you can view this profile.</p>
+          <form class="form-horizontal">
+            <div>
+                <input type="name" class="inputfield form-control" id="pwd" placeholder="Your name">
+            </div>
+            <div>
+              <input type="email" class="inputfield form-control" id="email" placeholder="Enter email">
+            </div>
+            <div>
+                <input type="password" class="inputfield form-control" id="pwd" placeholder="Enter password">
+            </div>           
+            <div>
+              <button type="submit" class="submit btn btn-default">Submit</button>
+            </div>
+            <div align="center" class="checkbox">
+              <label class="info"><input type="checkbox"> Remember me</label>
+            </div>
+
+          </form>
+        </div>
+        
+        <div class="modal-footer">
+          <p align="center" class="small-info">By signing up you agree to our terms and conditions.</p> 
+        </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+</html>
