@@ -81,5 +81,4 @@ test:
 production:
   <<: *default
   database: ladder_production
-  username: ladder
   password: <%= ENV['LADDER_DATABASE_PASSWORD'] %>

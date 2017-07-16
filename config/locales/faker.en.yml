@@ -1,0 +1,5 @@
+en:
+  faker:
+    name:
+      gender: ['female', 'male', 'other']
+      photo: ['default', 'dog', 'cat', 'pig', 'monkey', 'fox']

@@ -1,0 +1,18 @@
+<nav id="non_session_header">
+  <div class="container">
+    <ul class="pull-left">
+      <li>
+        <a class="brand" href="/">Logo</a>
+      </li>
+    </ul>
+
+    <ul class="pull-right">
+      <li>
+        <%= link_to t('.register'), new_user_registration_path %>
+      </li>
+      <li>
+        <%= link_to t('.login'), new_user_session_path %>
+      </li>
+    </ul>
+  </div>
+</nav>

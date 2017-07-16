@@ -1,0 +1,15 @@
+en:
+  global:
+    title: "Ladder"
+  layouts:
+    partials:
+      head:
+        description: "A web app to track your job applications."
+        keywords: "job tracking, career, applications, jobs, recruiter, resume, interview"
+        charset: "utf-8"
+      non_session_header:
+        login: "Log In"
+        register: "Register"
+        features: "Features"
+      session_header:
+        logout: "Logout"

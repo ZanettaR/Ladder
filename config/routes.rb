@@ -1,5 +1,18 @@
 Rails.application.routes.draw do
   root 'homepages#landing'
-  get  '/profile' => 'pages#profile'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  devise_for :users, path: '/', controllers: {
+    registrations: 'users/registrations',
+    sessions: 'users/sessions',
+    passwords: 'users/passwords'
+  }, path_names: {
+    sign_up: 'register',
+    cancel: 'deregister',
+    sign_in: 'login',
+    sign_out: 'logout',
+    edit: 'account',
+  }
+
+  resources :interests, only: [:create, :destroy]
+  resources :specialties, only: [:create, :destroy]
 end
