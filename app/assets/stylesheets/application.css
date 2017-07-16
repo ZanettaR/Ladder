@@ -1,7 +1,9 @@
 /*
+ *= require a_signin_modal
  *= require twitter/bootstrap
  */
- 
+
+
  .navbar {
   margin-bottom: 0 !important;
   border-radius: 0;
@@ -38,3 +40,4 @@ footer {
   }
   .row.content {height:auto;} 
 }
+
