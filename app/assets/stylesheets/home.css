@@ -1,0 +1,73 @@
+ .navbar {
+  margin-bottom: 0 !important;
+  border-radius: 0;
+  background-color: #FDFDFD !important;
+  border: none !important;
+}
+
+.navbar .navbar-inverse{
+  margin-bottom: 0;
+}
+
+.navbar .navbar-brand {
+  background-color:#8190A5
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 950px}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  height: 100%;
+}
+
+.col-md-4 {
+  background-color:#00A9A5;
+}
+
+.btn-block {
+  margin: 70px 0 70px 0;
+  background-color: #0B5351; 
+  color: #FFF;
+  border:none;
+  border-radius:25px;
+}
+
+.col-md-8 {
+  background-color:#F5ECE0; 
+  height: 100%
+}
+
+.glyphicon {
+  color: black;
+}
+
+.search-container {
+  margin-left:-15px;
+  width:104%;
+  height : 10%;
+  background-color: #0B5351;
+  overflow:auto;
+}
+
+.stylish-input-group {
+  margin: 25px 10px 0 25px;
+}
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height:auto;} 
+}
+
