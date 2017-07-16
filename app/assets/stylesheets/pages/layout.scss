@@ -24,6 +24,7 @@ a, a:link, a:active, a:hover, a:visited {
 }
 
 #main #main-content {
+  overflow: auto;
   width: calc(100% - #{$sidebar-width});
   float: left;
 }

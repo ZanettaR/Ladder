@@ -26,5 +26,14 @@
           <%= yield %>
         </main>
       <% end %>
+
+      <footer id="footer-msg" style="position: fixed; bottom: 0, width: 100%;">
+        <% if flash[:success] %>
+          <p class="alert alert-success"><%= flash[:success] %></p>
+        <% end %>
+        <% if flash[:failure] %>
+          <p class="alert alert-failure"><%= flash[:failure] %></p>
+        <% end %>
+      </footer>
   </body>
 </html>

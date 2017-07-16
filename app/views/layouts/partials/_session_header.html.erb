@@ -8,10 +8,13 @@
 
     <ul class="pull-right">
       <li class="hidden-screen-md">
-        <%= link_to 'Logout', destroy_user_session_path, 'data-method' => 'delete' %>
+        <%= link_to 'Feed', users_path %>
       </li>
       <li class="hidden-screen-md">
         <%= link_to 'Account', edit_user_registration_path %>
+      </li>
+      <li class="hidden-screen-md">
+        <%= link_to 'Logout', destroy_user_session_path, 'data-method' => 'delete' %>
       </li>
       <li class="visible-screen-md">
         <a class="toggle-aside">

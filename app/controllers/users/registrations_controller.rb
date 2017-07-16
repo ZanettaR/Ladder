@@ -18,6 +18,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # GET /resource/edit
   def edit
     super
+    @interest = current_user.user_interests.new
   end
 
   # PUT /resource

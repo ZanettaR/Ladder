@@ -1,7 +1,52 @@
-<div class="container">
-  <div class="form-container container-xs">
-  <h2><%= t('.title') %></h2>
-  <hr />
-  <%= render partial: 'update' %>
-  <%= render "devise/shared/links" %>
+<div id="tab_content_wrapper">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#account" aria-controls="account" role="tab" data-toggle="tab">Account</a></li>
+    <li role="presentation"><a href="#interests" aria-controls="interests" role="tab" data-toggle="tab">Interests</a></li>
+    <li role="presentation"><a href="#specialties" aria-controls="specialties" role="tab" data-toggle="tab">Specialties</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="account">
+      <%= render partial: 'update' %>
+      <%= render "devise/shared/links" %>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="interests">
+      <h3>Interests</h3>
+      <hr />
+      <%= form_tag '/interests', method: :post do |form| %>
+        <div class="form-group">
+          <%= label_tag :tag %>
+          <%= text_field_tag :name, "", class: 'form-control' %>
+          <input type="submit" class="btn btn-primary" value="Save">
+        </div>
+      <% end %>
+      <hr />
+      <ul>
+        <% current_user.user_interests.each do |s| %>
+        <li>
+          <a class="btn btn-primary btn-sm">
+            <%= s.tag.name %>
+          </a>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="specialties">
+      <h3>Specialties</h3>
+      <hr />
+      <ul>
+        <% current_user.user_specialties.each do |s| %>
+        <li>
+          <a class="btn btn-primary btn-sm">
+            <%= s.tag.name %>
+          </a>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 </div>

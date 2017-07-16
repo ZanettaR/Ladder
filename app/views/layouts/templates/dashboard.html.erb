@@ -1,14 +1,18 @@
+
 <%= content_for :content do %>
+
   <aside id="aside">
     <%= render partial: 'layouts/partials/session_aside' %>
   </aside>
 
   <main id="main">
-    <div id="sidebar">
-      <%= render partial: 'users/partials/sidebar' %>
-    </div>
-    <div id="main-content">
-      <%= yield %>
+    <div class="container container-lg">
+      <div id="sidebar">
+        <%= render partial: 'users/partials/sidebar' %>
+      </div>
+      <div id="main-content">
+        <%= yield %>
+      </div>
     </div>
   </main>
 <% end %>

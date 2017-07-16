@@ -1,7 +1,12 @@
 <div class="container bg-white">
   <ul class="list-unstyled">
-    <li>
-      link 1
+    <li class="text-center">
+      <h4>
+        <%= "#{current_user.first_name} #{current_user.last_name}" %>
+      </h4>
+    </li>
+    <li class="text-center">
+      <%= image_tag "#{current_user.photo}.svg", style: "max-width: 80%;" %>
     </li>
   </ul>
 </div>

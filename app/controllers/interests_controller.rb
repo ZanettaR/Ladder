@@ -1,5 +1,6 @@
 class InterestsController < ApplicationController
   def create
+    binding.pry
     @tag = Tag.find_or_create_by(interest_params)
     @interest = current_user.user_interests.build(tag_id: @tag.id)
     respond_to do |format|
@@ -14,6 +15,6 @@ class InterestsController < ApplicationController
   protected
 
   def interest_params
-    params.require(:interest).permit(:name)
+    params.permit(:name)
   end
 end
