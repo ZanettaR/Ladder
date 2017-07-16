@@ -1,0 +1,10 @@
+<nav id="session_header">
+  <ul class="pull-right">
+    <li>
+      <%= link_to 'Logout', destroy_user_session_path, 'data-method' => 'delete' %>
+    </li>
+    <li>
+      <%= link_to 'Account', edit_user_registration_path %>
+    </li>
+  </ul>
+</nav>

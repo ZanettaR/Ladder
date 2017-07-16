@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ladder</title>
+    <title><%= t('global.title')%> | <%= yield(:title) %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body id="<%= controller_id %>" class="<%= page_id %>">
+    <header id="header">
+      <% if user_signed_in? %>
+      <%= render partial: "layouts/partials/session_header" %>
+      <% else %>
+      <%= render partial: "layouts/partials/non_session_header" %>
+      <% end %>
+    </header>
+
+    <main id="main">
+      <%= yield %>
+    </main>
   </body>
 </html>

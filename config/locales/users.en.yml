@@ -1,0 +1,25 @@
+en:
+  users:
+    sessions:
+      new:
+        title: 'Log In'
+      create:
+        submit: 'Login'
+    registrations:
+      new:
+        title: 'Register'
+      create:
+        submit: "Register"
+      edit:
+        title: "Account"
+      update:
+        submit: "Save"
+    passwords:
+      new:
+        title: 'Reset Password'
+      create:
+        submit: 'Send me reset password instructions'
+      edit:
+        title: 'Change Password'
+      update:
+        submit: 'Change my password'

@@ -1,0 +1,34 @@
+#header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  z-index: $header-index;
+  height: $header-height;
+  min-width: $screen-xs;
+  backface-visibility: hidden;
+  background: $header-background;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+
+  nav {
+    padding: 0;
+  }
+  nav > ul {
+    margin: 0;
+    @extend .list-inline;
+    @extend .list-unstyled;
+  }
+  nav > ul > li {
+    padding: 0;
+    line-height: $header-height;
+  }
+  nav > ul > li > a {
+    padding-left: 1em;
+    padding-right: 1em;
+    display: inline-block;
+  }
+}
+
+#session_header {
+  background: white;
+}
