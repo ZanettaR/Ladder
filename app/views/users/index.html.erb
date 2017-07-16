@@ -1,17 +1,35 @@
 <article class="container container-lg">
   <div class="container">
-    <% 3.times do |i| %>
-    <div class="media bg-white">
-      <div class="media-left">
-        <a href="#">
-          <img class="media-object" src="..." alt="...">
-        </a>
+    <% @users.each do |user| %>
+      <% if user.id != current_user.id %>
+      <div class="panel panel-default feed_box">
+        <div class="panel-body">
+          <div class="media">
+            <div class="media-left media-top user_icon" >
+              <%= image_tag 'icon.svg', alt: 'Photo' %>
+            </div>
+            <div class="media-body">
+              <div>
+                <div class="ranking_container">
+                    <div class="star">
+                      <%= image_tag 'star.svg', alt: 'Photo', height: '24px' %>
+                    </div>
+                  <div class="center_ranking" style="margin-left: 5px;"><%= user.helpfullness %></div>
+                </div>
+
+                <h4 class="media-heading user_info">
+                  <%= user.first_name.capitalize %> can help with:
+                </h4>
+
+                  <% user.user_specialties.each do |specialty| %>
+                  <span class="btn btn-success" style="margin: 10px 0;"><%= specialty.tag.name %></span>
+                  <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="media-body">
-        <h4 class="media-heading">Media heading</h4>
-        ...
-      </div>
-    </div>
+      <% end %>
     <% end %>
   </div>
 </article>

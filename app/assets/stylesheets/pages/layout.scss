@@ -16,6 +16,7 @@ a, a:link, a:active, a:hover, a:visited {
   min-height: calc(100vh - #{$header-height});
   padding-bottom: 3em;
   padding-top: $header-height / 2;
+  overflow: auto;
 
   > article.container {
     padding: 15px 0;

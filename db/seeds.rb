@@ -6,9 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 users = User.create([
-  { first_name: 'Anna', last_name: 'Yazmin', email: 'annabel.yazmin@gmail.com', password: 'abcd1234', gender: 'female', birth_year: 1994, biography: 'Hi I am Anna' },
-  { first_name: 'Jane', last_name: 'Doe', email: 'janedoe@mail.com', password: 'abcd1234', gender: 'female', birth_year: 1992, biography: 'Hi I am jane' },
-  { first_name: 'John', last_name: 'Doe', email: 'johndoe@mail.com', password: 'abcd1234', gender: 'male', birth_year: 1990, biography: 'Hi I am john' },
+  { first_name: 'Anna', last_name: 'Yazmin', email: 'annabel.yazmin@gmail.com', password: 'abcd1234', gender: 'female', birth_year: 1981, biography: 'Hi I am Anna', photo: 'default' },
+  { first_name: 'Hope', last_name: 'Bitz', email: 'hoeblitz@gmail.com', password: 'abcd1234', gender: 'female', birth_year: 1994, biography: 'Hi I am Anna', photo: 'default' },
+  { first_name: 'Jane', last_name: 'Doe', email: 'janedoe@mail.com', password: 'abcd1234', gender: 'female', birth_year: 1992, biography: 'Hi I am jane', photo: 'default' },
+  { first_name: 'John', last_name: 'Doe', email: 'johndoe@mail.com', password: 'abcd1234', gender: 'male', birth_year: 1990, biography: 'Hi I am john', photo: 'default' },
 ])
 
 tags = Tag.create([
@@ -68,4 +69,25 @@ tags = Tag.create([
   { name: 'coach'},
   { name: 'sponsor'},
   { name: 'hiring'}
+])
+
+User.all.first.user_interests.create([
+  {tag_id: 2},  {tag_id: 12},  {tag_id: 22},  {tag_id: 32},  {tag_id: 42}
+])
+User.all.first.user_specialties.create([
+  {tag_id: 3},  {tag_id: 13},  {tag_id: 23},  {tag_id: 33},  {tag_id: 43}
+])
+
+User.all.second.user_interests.create([
+  {tag_id: 3},  {tag_id: 13},  {tag_id: 23},  {tag_id: 33},  {tag_id: 43}
+])
+User.all.second.user_specialties.create([
+  {tag_id: 2},  {tag_id: 12},  {tag_id: 22},  {tag_id: 32},  {tag_id: 42}
+])
+
+User.all.third.user_interests.create([
+  {tag_id: 3},  {tag_id: 12},  {tag_id: 53},  {tag_id: 16},  {tag_id: 43}
+])
+User.all.third.user_specialties.create([
+  {tag_id: 2},  {tag_id: 22},  {tag_id: 33},  {tag_id: 44},  {tag_id: 42}
 ])

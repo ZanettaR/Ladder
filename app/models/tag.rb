@@ -8,6 +8,7 @@ class Tag < ApplicationRecord
   # Validations
   validates :name, presence: true
   validates :name, length: { in: 2..50 }
+  validates :name, uniqueness: true
 
   # Validation Callbacks
   before_validation :sanatize_name
