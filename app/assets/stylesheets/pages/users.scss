@@ -1,5 +1,5 @@
 
-#users.page-index {
+.page-index {
   article.container {
     background: transparent;
 
@@ -74,10 +74,10 @@
 
 }
 
-#registrations.page-default {
+.page-default {
   #main-content > .container { background: #F5ECE0; }
   #main {
     max-width: $screen-xl;
-    background: #F5ECE0; 
+    background: #F5ECE0;
   }
 }

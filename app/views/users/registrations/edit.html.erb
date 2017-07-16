@@ -1,19 +1,19 @@
 <div id="tab_content_wrapper">
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#account" aria-controls="account" role="tab" data-toggle="tab">Account</a></li>
-    <li role="presentation"><a href="#interests" aria-controls="interests" role="tab" data-toggle="tab">Interests</a></li>
+    <li role="presentation"><a href="#account" aria-controls="account" role="tab" data-toggle="tab">Account</a></li>
+    <li role="presentation" class="active"><a href="#interests" aria-controls="interests" role="tab" data-toggle="tab">Interests</a></li>
     <li role="presentation"><a href="#specialties" aria-controls="specialties" role="tab" data-toggle="tab">Specialties</a></li>
   </ul>
 
   <!-- Tab panes -->
   <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="account">
+    <div role="tabpanel" class="tab-pane" id="account">
       <%= render partial: 'update' %>
       <%= render "devise/shared/links" %>
     </div>
 
-    <div role="tabpanel" class="tab-pane" id="interests">
+    <div role="tabpanel" class="tab-pane active" id="interests">
       <h3>Interests</h3>
       <hr />
       <%= form_tag '/interests', method: :post do |form| %>
@@ -27,9 +27,7 @@
       <ul>
         <% current_user.user_interests.each do |s| %>
         <li>
-          <a class="btn btn-primary btn-sm">
-            <%= s.tag.name %>
-          </a>
+            <%= link_to raw("#{s.tag.name}<i class='fa fa-times'></i>"), interest_path(s), 'data-method' => 'delete' %>
         </li>
         <% end %>
       </ul>

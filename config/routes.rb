@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   resources :interests, only: [:create, :destroy]
   resources :specialties, only: [:create, :destroy]
   resources :users, only: [:show, :index]
+  get 'search/tags/:id' => 'interests#search', as: :interest_search
 end

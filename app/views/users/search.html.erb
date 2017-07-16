@@ -1,0 +1,31 @@
+<% @users.each do |user| %>
+  <% if user.id != current_user.id %>
+  <div class="panel panel-default feed_box">
+    <div class="panel-body">
+      <div class="media">
+        <div class="media-left media-top user_icon" >
+          <%= image_tag "#{user.photo}.png", alt: 'Photo', width: '100px', class: "img-circle" %>
+        </div>
+        <div class="media-body">
+          <div>
+            <div class="ranking_container">
+                <div class="star">
+                  <%= image_tag 'star.svg', alt: 'Photo', height: '24px' %>
+                </div>
+              <div class="center_ranking" style="margin-left: 5px;"><%= user.helpfullness %></div>
+            </div>
+
+            <h4 class="media-heading user_info">
+              <%= user.first_name.capitalize %> can help with:
+            </h4>
+
+              <% user.user_specialties.each do |specialty| %>
+              <span class="btn btn-success" style="margin: 10px 0;"><%= specialty.tag.name %></span>
+              <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+<% end %>

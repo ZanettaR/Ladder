@@ -6,18 +6,18 @@
         <div class="panel-body">
           <div class="media">
             <div class="media-left media-top user_icon" >
-              <%= image_tag 'icon.svg', alt: 'Photo' %>
+              <%= image_tag "#{user.photo}.png", alt: 'Photo', width: '100px', class: "img-circle" %>
             </div>
             <div class="media-body">
               <div>
                 <div class="ranking_container">
-                    <div class="star">
-                      <%= image_tag 'star.svg', alt: 'Photo', height: '24px' %>
+                    <div class="star" style="overflow: relative;">
+                      <%= image_tag 'star.png', alt: 'Photo', height: '24px', style: "position: absolute" %>
                     </div>
                   <div class="center_ranking" style="margin-left: 5px;"><%= user.helpfullness %></div>
                 </div>
 
-                <h4 class="media-heading user_info">
+                <h4 class="media-heading user_info" style="text-indent: 30px;">
                   <%= user.first_name.capitalize %> can help with:
                 </h4>
 
