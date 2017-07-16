@@ -10,19 +10,19 @@
   background: $header-background;
   border-bottom: 1px solid rgba(0,0,0,.05);
 
-  nav {
+  nav > div {
     padding: 0;
   }
-  nav > ul {
+  nav > div > ul {
     margin: 0;
     @extend .list-inline;
     @extend .list-unstyled;
   }
-  nav > ul > li {
+  nav > div > ul > li {
     padding: 0;
     line-height: $header-height;
   }
-  nav > ul > li > a {
+  nav > div > ul > li > a {
     padding-left: 1em;
     padding-right: 1em;
     display: inline-block;
