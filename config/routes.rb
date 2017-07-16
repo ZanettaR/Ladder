@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   resources :interests, only: [:create, :destroy]
   resources :specialties, only: [:create, :destroy]
   get "/feed" => "users#index", as: :users_feed
+  get "/landing2" => "homepages#landing2"
 end

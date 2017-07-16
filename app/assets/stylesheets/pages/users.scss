@@ -73,3 +73,11 @@
   }
 
 }
+
+#registrations.page-default {
+  #main-content > .container { background: #F5ECE0; }
+  #main {
+    max-width: $screen-xl;
+    background: #F5ECE0; 
+  }
+}

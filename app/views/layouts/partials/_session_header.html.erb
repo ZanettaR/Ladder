@@ -1,23 +1,22 @@
-<nav id="session_header">
-  <div class="container container-lg">
-    <ul class="pull-left">
-      <li>
-        <%= link_to t('global.title'), root_path, class: 'brand' %>
-      </li>
-    </ul>
-
-    <ul class="pull-right">
-      <li class="hidden-screen-md">
-        <%= link_to 'Logout', destroy_user_session_path, 'data-method' => 'delete' %>
-      </li>
-      <li class="hidden-screen-md">
-        <%= link_to 'Account', edit_user_registration_path %>
-      </li>
-      <li class="visible-screen-md">
-        <a class="toggle-aside">
-          <i class="fa fa-bars"></i>
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="<%= root_path %>" style="color:black;">Ladder</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="<%= users_feed_path %>" style="color:black;">Feed</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <%= link_to 'Logout', destroy_user_session_path, 'data-method' => 'delete' %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
