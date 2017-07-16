@@ -1,0 +1,25 @@
+<nav id="non_session_header">
+  <div class="container">
+    <ul class="pull-left">
+      <li>
+        <a class="navbar-brand" href="#">Logo</a>
+      </li>
+    </ul>
+
+    <ul class="pull-right">
+      <li>
+        <%= link_to t('.register'), new_user_registration_path %>
+      </li>
+      <li>
+        <%= link_to t('.login'), new_user_session_path %>
+      </li>
+      <li>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>

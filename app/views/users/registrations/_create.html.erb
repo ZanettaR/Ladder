@@ -1,0 +1,50 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |form| %>
+  <%= devise_error_messages! %>
+
+  <div class="form-group">
+    <%= form.label :first_name %><br />
+    <%= form.text_field :first_name, autofocus: true, required: true, class: 'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :last_name %><br />
+    <%= form.text_field :last_name, autofocus: true, required: true, class: 'form-control'  %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :email %><br />
+    <%= form.email_field :email, autofocus: true, required: true, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= form.password_field :password, autocomplete: 'off', required: true, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :password_confirmation %><br />
+    <%= form.password_field :password_confirmation, autocomplete: 'off', required: true, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :gender %>
+    <%= form.select(:gender, options_for_gender, prompt: :gender) %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :photo %>
+    <%= form.select(:photo, options_for_photo, prompt: :photo) %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :birth_year %>
+    <%= form.select :birth_year, options_for_birth_year, prompt: t('helpers.label.user.birth_year')  %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit t('.submit'), class: 'btn btn-block btn-primary' %>
+  </div>
+<% end %>

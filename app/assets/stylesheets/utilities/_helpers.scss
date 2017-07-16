@@ -1,0 +1,12 @@
+.container-xs,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+  margin: 0 auto;
+}
+.container-xs { max-width: $screen-xs !important; }
+.container-sm { max-width: $screen-sm !important; }
+.container-md { max-width: $screen-md !important; }
+.container-lg { max-width: $screen-lg !important; }
+.container-xl { max-width: $screen-xl !important; }

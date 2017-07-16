@@ -1,0 +1,21 @@
+<nav id="session_header">
+  <div class="container-lg">
+    <ul class="pull-right">
+      <li>
+        <a class="navbar-brand" href="#">Logo</a>
+      </li>
+    </ul>
+
+    <ul class="pull-right">
+      <li>
+        <%= link_to 'Logout', destroy_user_session_path, 'data-method' => 'delete' %>
+      </li>
+      <li>
+        <%= link_to 'Account', edit_user_registration_path %>
+      </li>
+      <li>
+        <a href="#"><span class="glyphicon glyphicon-search"></span> Search</a>
+      </li>
+    </ul>
+  </div>
+</nav>

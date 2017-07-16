@@ -1,0 +1,6 @@
+#main {
+  background: #eff2f7;
+  margin-top: $header-height;
+  min-height: calc(100vh - #{$header-height});
+  padding-bottom: 3em;
+}
