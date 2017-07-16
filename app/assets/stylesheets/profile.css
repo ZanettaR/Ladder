@@ -4,10 +4,32 @@
 html {
   background-color: #F5ECE0;
 }
+.navbar {
+  margin-bottom: 0 !important;
+  border-radius: 0;
+  background-color: #FDFDFD !important;
+  border: none !important;
+}
+
+.navbar .navbar-inverse{
+  margin-bottom: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 450px}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  height: 100%;
+}
+
 h2 {
   color: #47525E;
   font-size: 70px; 
   text-align: center; 
+  top: 20;
  }
  body {
     position: absolute;
@@ -28,8 +50,8 @@ html {
   float: left;
   display: inline-block;
   overflow: hidden;
-  width: 25vw;
-  height: 25vw;
+  width: 15vw;
+  height: 15vw;
   border-radius: 10%;
   background-color: #C68587;
   border: 6px solid #B3C9CB;
@@ -256,4 +278,4 @@ html {
 .avatar.open
   > #camera {
     visibility: hidden;
-}
+  } 
