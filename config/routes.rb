@@ -15,4 +15,7 @@ Rails.application.routes.draw do
 
   resources :interests, only: [:create, :destroy]
   resources :specialties, only: [:create, :destroy]
+
+  get  '/profile' => 'pages#profile'
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

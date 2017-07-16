@@ -1,16 +1,54 @@
-<div class="container-fluid text-center">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <%= stylesheet_link_tag    'home', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+  </style>
+</head>
+<body>  
+<div class="container-fluid text-center">    
   <div class="row content">
-    <div class="col-md-4 sidenav" style="background-color:#00A9A5">
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
+    <div class="col-md-4 sidenav"> 
+      <button type="button" class="btn btn-primary btn-lg btn-block"><span class="glyphicon glyphicon-user" style="float:left; padding-left: 20px;"></span> Profile</button>
+      <button type="button" class="btn btn-default btn-lg btn-block"><span class="glyphicon glyphicon-cog" style="float:left; padding-left: 20px;"></span> Settings</button>
+      <br>
+      <br>
+      <br>
+      <div class="btn-group btn-block">
+        <button type="button" class="btn btn-block btn-primary dropdown-toggle" data-toggle="dropdown" style="height: 50px"><span class="glyphicon glyphicon-alert" style="float:left; padding-left: 20px;" ></span> Notification  <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu btn-block" role="menu">
+          <li><a href="#"></span> Notification 1</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Notification 2</a></li>   
+        </ul>
+      </div>
     </div>
-    <div class="col-md-8 text-left" style="background-color:#F5ECE0; height: 100%">
-      <h1>Welcome</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <hr>
-      <h3>Test</h3>
-      <p>Lorem ipsum...</p>
+    <div class="col-md-8 text-left"> 
+      <div class="search-container">
+        <div class="input-group stylish-input-group">
+          <input type="text" class="form-control"  placeholder="Search" >
+            <span class="input-group-addon">
+              <button type="submit">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>  
+            </span>
+          </div>
+        </div>
+        <h1>Welcome</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <hr>
+        <h3>Test</h3>
+        <p>Lorem ipsum...</p>
+      </div>
     </div>
-  </div>
 </div>
+</body>
+</html>
