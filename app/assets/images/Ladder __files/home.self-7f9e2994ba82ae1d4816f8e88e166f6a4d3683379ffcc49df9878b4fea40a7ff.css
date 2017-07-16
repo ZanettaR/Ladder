@@ -22,8 +22,6 @@ ul.nav.navbar-nav {
   height: 60px;
 }
 
-
-
 a {
   height: 60px;
 }
@@ -90,7 +88,7 @@ a {
 .feed-item {
   width: 80%;
   height: 20%;
-  margin:80px 0 0 80px;
+  margin:auto;
   background-color: #F7FAF8;
 }
 
@@ -118,11 +116,11 @@ a {
 .feed-user-details-container {
   border-radius: 25px;
   background-color: #FDE2C9;
-  margin: 5px 0px 50px 10px;
+  margin: 5x 0 10px 10px;
+  float: center;
   width: 95%;
   height:65px;
 }
-
 
 h3 {
   font-size: 35px;
@@ -152,5 +150,4 @@ footer {
   }
   .row.content {height:auto;} 
 }
-
 

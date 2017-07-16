@@ -1,21 +1,23 @@
-<nav id="session_header">
-  <div class="container-lg">
-    <ul class="pull-right">
-      <li>
-        <a class="navbar-brand" href="#">Logo</a>
-      </li>
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>                        
+    </button>
+    <a class="navbar-brand" href="#" style="color:black; margin:auto;">Logo</a>
+  </div>
+  <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav">
+      <li><a href="/" style="background-color:#E5E9F2; color:black;">Home</a></li>
+      <li><a href="#" style="color:black;">About</a></li>
+      <li><a href="#" style="color:black;">Feed</a></li>
+      <li><a href="#" style="color:black;">Contact Us</a></li>
     </ul>
-
-    <ul class="pull-right">
-      <li>
-        <%= link_to 'Logout', destroy_user_session_path, 'data-method' => 'delete' %>
-      </li>
-      <li>
-        <%= link_to 'Account', edit_user_registration_path %>
-      </li>
-      <li>
-        <a href="#"><span class="glyphicon glyphicon-search"></span> Search</a>
-      </li>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#" style="color:black;"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
     </ul>
   </div>
+</div>
 </nav>

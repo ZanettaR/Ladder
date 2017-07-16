@@ -16,16 +16,16 @@
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-md-4 sidenav"> 
-      <button type="button" class="btn btn-primary btn-lg btn-block"><span class="glyphicon glyphicon-user" style="float:left; padding-left: 20px;"></span> Profile</button>
+    <a href="/profile"><button type="button" class="btn btn-primary btn-lg btn-block"><span class="glyphicon glyphicon-user" style="float:left; padding-left: 20px;"></span> Profile</button></a>
       <button type="button" class="btn btn-default btn-lg btn-block"><span class="glyphicon glyphicon-cog" style="float:left; padding-left: 20px;"></span> Settings</button>
       <br>
       <br>
       <br>
       <div class="btn-group btn-block">
-        <button type="button" class="btn btn-block btn-primary dropdown-toggle" data-toggle="dropdown" style="height: 50px"><span class="glyphicon glyphicon-alert" style="float:left; padding-left: 20px;" ></span> Notification  <span class="caret"></span>
+        <button type="button" class="btn btn-block btn-primary dropdown-toggle" data-toggle="dropdown" style="height: 50px; margin: auto !important; background-color: #FFA093 !important;"><span class="glyphicon glyphicon-alert" style="float:left; padding-left: 20px;" ></span> Notification  <span class="caret"></span>
         </button>
-        <ul class="dropdown-menu btn-block" role="menu">
-          <li><a href="#"></span> Notification 1</a></li>
+        <ul class="dropdown-menu btn-block rounded-notification" role="menu">
+          <li><a href="#"></span><div class="rounded-notification"> Notification 1</div></a></li>
           <li class="divider"></li>
           <li><a href="#">Notification 2</a></li>   
         </ul>
@@ -42,11 +42,97 @@
             </span>
           </div>
         </div>
-        <h1>Welcome</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <hr>
-        <h3>Test</h3>
-        <p>Lorem ipsum...</p>
+        <div class="feed-container">
+          <div class="feed-item">
+            <div class="feed-item-top">
+              <div class="feed-profile-image-container">
+                  <img src="https://pbs.twimg.com/media/C8fPgCGU0AABzPa.jpg" class="feed-profile-image"/>
+              </div>
+              <div class="feed-user-headline-container">
+                 <div class="feed-user-points">
+                  <svg width="30" height="30" viewBox="0 0 98 94" style="margin-top:20px;">
+                   <defs>
+                     <clipPath id="clipping">
+                       <use xlink:href="#star" />
+                     </clipPath>
+                   </defs>  
+                   <polygon id="star" points="48 6 65 30 92 37 75 60 75 88 48 80 22 88 22 60 6 37 32 30" style="fill:none;stroke:#fadf0b;stroke-width:6"/>
+                  </svg>
+                </div>
+                <div class="feed-user-headline">
+                  <h3>Zanetta needs help with: </h3>
+                </div>
+             </div>
+          </div>
+          <div class="feed-user-details-container">
+            <div class="feed-user-details">
+              <h4> CSS </h4>
+              <p> IDK if we should use a full description or dropdown here. </p>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="feed-container">
+        <div class="feed-item">
+          <div class="feed-item-top">
+            <div class="feed-profile-image-container">
+                <img src="https://pbs.twimg.com/media/C8fPgCGU0AABzPa.jpg" class="feed-profile-image"/>
+            </div>
+            <div class="feed-user-headline-container">
+               <div class="feed-user-points">
+                <svg width="30" height="30" viewBox="0 0 98 94" style="margin-top:20px;">
+                 <defs>
+                   <clipPath id="clipping">
+                     <use xlink:href="#star" />
+                   </clipPath>
+                 </defs>  
+                 <polygon id="star" points="48 6 65 30 92 37 75 60 75 88 48 80 22 88 22 60 6 37 32 30" style="fill:none;stroke:#fadf0b;stroke-width:6"/>
+                </svg>
+              </div>
+              <div class="feed-user-headline">
+                <h3>Zanetta needs help with: </h3>
+              </div>
+           </div>
+        </div>
+        <div class="feed-user-details-container">
+          <div class="feed-user-details">
+            <h4> CSS </h4>
+            <p> IDK if we should use a full description or dropdown here. </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="feed-container">
+      <div class="feed-item">
+        <div class="feed-item-top">
+          <div class="feed-profile-image-container">
+              <img src="https://pbs.twimg.com/media/C8fPgCGU0AABzPa.jpg" class="feed-profile-image"/>
+          </div>
+          <div class="feed-user-headline-container">
+             <div class="feed-user-points">
+              <svg width="30" height="30" viewBox="0 0 98 94" style="margin-top:20px;">
+               <defs>
+                 <clipPath id="clipping">
+                   <use xlink:href="#star" />
+                 </clipPath>
+               </defs>  
+               <polygon id="star" points="48 6 65 30 92 37 75 60 75 88 48 80 22 88 22 60 6 37 32 30" style="fill:none;stroke:#fadf0b;stroke-width:6"/>
+              </svg>
+            </div>
+            <div class="feed-user-headline">
+              <h3>Zanetta needs help with: </h3>
+            </div>
+         </div>
+      </div>
+      <div class="feed-user-details-container">
+        <div class="feed-user-details">
+          <h4> CSS </h4>
+          <p> IDK if we should use a full description or dropdown here. </p>
+        </div>
+      </div>
+    </div>
+
+    
       </div>
     </div>
 </div>
