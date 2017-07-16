@@ -1,6 +1,29 @@
+body {
+  width: 100%;
+  height: 100%;
+  color: $theme-font-color;
+}
+
+a {
+  color: $theme-font-color;
+}
+a, a:link, a:active, a:hover, a:visited {
+
+}
 #main {
   background: #eff2f7;
   margin-top: $header-height;
   min-height: calc(100vh - #{$header-height});
   padding-bottom: 3em;
+  padding-top: $header-height / 2;
+
+  > article.container {
+    padding: 15px 0;
+    background: white;
+  }
+}
+
+#main #main-content {
+  width: calc(100% - #{$sidebar-width});
+  float: left;
 }

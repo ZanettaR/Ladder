@@ -5,7 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-tags - Tag.create([
+users = User.create([
+  { first_name: 'Anna', last_name: 'Yazmin', email: 'annabel.yazmin@gmail.com', password: 'abcd1234', gender: 'female', birth_year: 1994, biography: 'Hi I am Anna' },
+  { first_name: 'Jane', last_name: 'Doe', email: 'janedoe@mail.com', password: 'abcd1234', gender: 'female', birth_year: 1992, biography: 'Hi I am jane' },
+  { first_name: 'John', last_name: 'Doe', email: 'johndoe@mail.com', password: 'abcd1234', gender: 'male', birth_year: 1990, biography: 'Hi I am john' },
+])
+
+tags = Tag.create([
   { name: 'undergraduate'},
   { name: 'graduate school'},
   { name: 'phd'},

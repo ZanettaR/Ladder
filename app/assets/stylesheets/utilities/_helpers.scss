@@ -10,3 +10,18 @@
 .container-md { max-width: $screen-md !important; }
 .container-lg { max-width: $screen-lg !important; }
 .container-xl { max-width: $screen-xl !important; }
+
+.bg-white { background: white; }
+
+@include screen-md-up {
+  .visible-screen-md {display: none !important; }
+}
+@include screen-md-down {
+  .hidden-screen-md {display: none !important; }
+}
+@include screen-sm-up {
+  .visible-screen-sm {display: none !important; }
+}
+@include screen-sm-down {
+  .hidden-screen-sm {display: none !important; }
+}

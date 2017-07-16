@@ -101,6 +101,8 @@ GEM
     faker (1.7.3)
       i18n (~> 0.5)
     ffi (1.9.18)
+    font-awesome-rails (4.7.0.2)
+      railties (>= 3.2, < 5.2)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     i18n (0.8.6)
@@ -121,6 +123,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.6)
       mime-types (>= 1.16, < 4)
+    meta-tags (2.4.1)
+      actionpack (>= 3.2.0, < 5.2)
     method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
@@ -264,10 +268,12 @@ DEPENDENCIES
   devise
   factory_girl_rails
   faker
+  font-awesome-rails
   jbuilder (~> 2.5)
   jquery-rails
   launchy
   listen (~> 3.0.5)
+  meta-tags
   pg
   pry-rails
   puma (~> 3.0)

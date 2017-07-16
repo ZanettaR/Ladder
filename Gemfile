@@ -19,6 +19,8 @@ gem 'uglifier', '>= 1.3.0' # Use Uglifier as compressor for JavaScript assets
 gem 'therubyracer'  # If using Ruby
 gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem "font-awesome-rails"
+gem 'meta-tags'
 
 
 group :development, :test do

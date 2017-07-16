@@ -8,6 +8,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.text :biography,            null: false, default: ''
       t.string :gender,             null: false, default: ''
       t.integer :birth_year
+      t.integer :helpfullness,       null: false, default: 0
 
       ## Database authenticatable
       t.string :email,              null: false, default: ''

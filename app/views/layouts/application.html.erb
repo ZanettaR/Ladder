@@ -2,6 +2,7 @@
 <html>
   <head>
     <title><%= t('global.title')%> | <%= yield(:title) %></title>
+    <%= render partial: 'layouts/partials/head' %>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,7 +11,7 @@
   </head>
 
   <body id="<%= controller_id %>" class="<%= page_id %>">
-    <header id="header">
+    <header id="header" class="fixed-header">
       <% if user_signed_in? %>
       <%= render partial: "layouts/partials/session_header" %>
       <% else %>
@@ -18,12 +19,12 @@
       <% end %>
     </header>
 
-    <main id="main">
-      <%= yield %>
-    </main>
-
-    <footer class="container-fluid text-center">
-      <%= render partial: "layouts/partials/footer" %>
-    </footer>
+      <% if content_for?(:content) %>
+        <%= yield(:content) %>
+      <% else %>
+        <main id="main">
+          <%= yield %>
+        </main>
+      <% end %>
   </body>
 </html>

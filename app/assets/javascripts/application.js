@@ -12,6 +12,56 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require slideout
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+// =========================================
+// SLIDEOUT.js
+// =========================================
+function initializeSlideOut(){
+    // initialize left slideout
+    var slideout = new Slideout({
+      'panel': document.getElementById('main'),
+      'menu': document.getElementById('aside'),
+      'padding': 200,
+      'side': 'left',
+      'tolerance': 70
+    });
+
+    $('.toggle-aside').click(function(){
+      slideout.toggle();
+    })
+
+    var fixed = document.querySelector('.fixed-header');
+
+    slideout.on('translate', function(translated) {
+      fixed.style.transform = 'translateX(' + translated + 'px)';
+    });
+
+    slideout.on('beforeopen', function () {
+      fixed.style.transition = 'transform 300ms ease';
+      fixed.style.transform = 'translateX(200px)';
+    });
+
+    slideout.on('beforeclose', function () {
+      fixed.style.transition = 'transform 300ms ease';
+      fixed.style.transform = 'translateX(200px)';
+    });
+
+    slideout.on('open', function () {
+      fixed.style.transition = '';
+    });
+
+    slideout.on('close', function () {
+      fixed.style.transition = '';
+    });
+}
+
+// =========================================
+// INITIALIZE
+// =========================================
+document.addEventListener("turbolinks:load", function() {
+  initializeSlideOut();
+});

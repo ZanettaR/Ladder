@@ -1,0 +1,10 @@
+#sidebar {
+  width: $sidebar-width;
+  padding: 0 15px;
+  float: left;
+
+  > .container {
+    padding: 15px;
+    max-width: 100%;
+  }
+}
