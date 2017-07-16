@@ -27,7 +27,8 @@
       <ul>
         <% current_user.user_interests.each do |s| %>
         <li>
-            <%= link_to raw("#{s.tag.name}<i class='fa fa-times'></i>"), interest_path(s), 'data-method' => 'delete' %>
+
+            <%= link_to raw("#{s.tag.name}<i class='fa fa-times'></i>"), interest_path(s), 'data-method' => 'delete', class: "btn btn-outline-success" %>
         </li>
         <% end %>
       </ul>
