@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  # before_action :redirect_unauthenticated_users
+
   layout :set_layout
 
   def show

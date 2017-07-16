@@ -1,12 +1,13 @@
 #sidebar {
   width: $sidebar-width;
-  padding: 0 15px;
+  // padding: 0 15px;
   float: left;
 
   > .container {
     padding: 15px;
+    height: 100vh;
     max-width: 100%;
     text-align: center;
-    background: #009A5;
+    background: #00A9A5;
   }
 }

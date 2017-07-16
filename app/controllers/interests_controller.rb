@@ -33,6 +33,10 @@ class InterestsController < ApplicationController
     end
   end
 
+  def post_search
+    redirect_to interest_search_path(params[:id])
+  end
+
   protected
 
     def set_layout

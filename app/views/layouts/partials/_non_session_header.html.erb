@@ -1,18 +1,34 @@
-<nav id="non_session_header">
-  <div class="container">
-    <ul class="pull-left">
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#" style="
+      color: white;
+      font-size: 100%;
+      padding: 5px 32px 3px;
+      border-radius: 5px;
+      line-height: normal;
+      margin: 11px 35px;
+      height: 28px;">Logo</a>
+  </div>
+  <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav">
+      <li><a href="#" style="background-color:#E5E9F2; color:black;">Home</a></li>
+      <li><a href="#" style="color:black;">About</a></li>
       <li>
-        <a class="brand" href="/">Logo</a>
+        <%= link_to t('.register'), new_user_registration_path, style: "color:black;" %>
+      </li>
+      <li>
+         <%= link_to t('.login'), new_user_session_path, style: "color:black;" %>
       </li>
     </ul>
-
-    <ul class="pull-right">
-      <li>
-        <%= link_to t('.register'), new_user_registration_path %>
-      </li>
-      <li>
-        <%= link_to t('.login'), new_user_session_path %>
-      </li>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#" style="color:black;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
   </div>
+</div>
 </nav>

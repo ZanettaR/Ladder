@@ -1,3 +1,14 @@
+<div class="search-container">
+    <%= form_tag '/search/tags', method: :post, class: "form-inline" do |f| %>
+      <div class="form-group" style="width: 400px; margin-left: 10%;">
+        <%= text_field_tag :id, "", class: "form-control", name: "id" %>
+        <button type="submit">
+          <span class="glyphicon glyphicon-search"></span>
+        </button>
+      </div>
+    <% end %>
+  </div>
+
 <div id="tab_content_wrapper">
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">

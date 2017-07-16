@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'homepages#landing'
+  root 'users#index'
 
   devise_for :users, path: '/', controllers: {
     registrations: 'users/registrations',
@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   resources :specialties, only: [:create, :destroy]
   resources :users, only: [:show, :index]
   get 'search/tags/:id' => 'interests#search', as: :interest_search
+  post 'search/tags' => 'interests#post_search', as: :interest_post_search
 end

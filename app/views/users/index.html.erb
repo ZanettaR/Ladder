@@ -1,23 +1,39 @@
-<article class="container container-lg">
-  <div class="container">
+<article class="" style="width: 100%">
+
+  <div class="container" style="width: 100%">
+    <% if current_user %>
+    <div class="search-container">
+        <%= form_tag '/search/tags', method: :post, class: "form-inline" do |f| %>
+          <div class="form-group" style="width: 400px; margin-left: 10%;">
+            <%= text_field_tag :id, "", class: "form-control", name: "id" %>
+            <button type="submit">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+
     <% @users.each do |user| %>
-      <% if user.id != current_user.id %>
+      <% if user.id || (current_user && user_id != current_user.id) %>
       <div class="panel panel-default feed_box">
         <div class="panel-body">
           <div class="media">
             <div class="media-left media-top user_icon" >
+              <a href="<%= user_path(user) %>">
               <%= image_tag "#{user.photo}.png", alt: 'Photo', width: '100px', class: "img-circle" %>
+              </a>
             </div>
             <div class="media-body">
               <div>
                 <div class="ranking_container">
                     <div class="star" style="overflow: relative;">
-                      <%= image_tag 'star.png', alt: 'Photo', height: '24px', style: "position: absolute" %>
+                      <%= image_tag 'star.png', alt: 'Photo', height: '50px', style: "position: absolute" %>
                     </div>
-                  <div class="center_ranking" style="margin-left: 5px;"><%= user.helpfullness %></div>
+                  <div class="center_ranking" style="margin-left: 10px; margin-top: 10px; font-size: 18px;"><%= user.helpfullness %></div>
                 </div>
 
-                <h4 class="media-heading user_info" style="text-indent: 30px;">
+                <h4 class="media-heading user_info" style="text-indent: 60px;">
                   <%= user.first_name.capitalize %> can help with:
                 </h4>
 

@@ -1,24 +1,44 @@
 <article class="container">
   <div class="container container-md">
     <div class="form-group">
-      <lanel>First Name</lanel>
+        <%= image_tag 'default.png', width: '100px', class: 'img-circle' %>
+        <h4><%= "#{@user.first_name} #{@user.last_name}" %></h4>
+    </div>
+
+    <div class="form-group">
+      <label>First Name</label>
       <span class="form-control">
         <%= @user.first_name %>
       </span>
     </div>
 
     <div class="form-group">
-      <lanel>Last Name</lanel>
+      <label>Last Name</label>
       <span class="form-control">
         <%= @user.last_name %>
       </span>
     </div>
 
     <div class="form-group">
-      <lanel>biography</lanel>
+      <label>biography</label>
       <span class="form-control">
         <%= @user.biography %>
       </span>
     </div>
+
+    <ul class="row">
+      <div class="col-md-6">
+        <h4>Specialies</h4>
+        <% @user.user_specialties.each do |s| %>
+        <li><span class="btn btn-outline-danger"><%= s.tag.name %></span></li>
+        <% end %>
+      </div>
+      <div class="col-md-6">
+        <h4>Interests</h4>
+        <% @user.user_interests.each do |s| %>
+        <li><span class="btn btn-outline-success"><%= s.tag.name %></span></li>
+        <% end %>
+      </div>
+    </ul>
   </div>
 </article>

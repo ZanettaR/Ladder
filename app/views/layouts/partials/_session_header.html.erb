@@ -1,26 +1,29 @@
-<nav id="session_header">
-  <div class="container container-lg">
-    <ul class="pull-left">
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#" style="color:black;">Logo</a>
+  </div>
+  <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav">
+      <li><a href="#" style="background-color:#E5E9F2; color:black;">Home</a></li>
       <li>
-        <%= link_to t('global.title'), root_path, class: 'brand' %>
+        <%= link_to 'Feed', users_path, style: "background-color:#E5E9F2; color:black;" %>
+      </li>
+      <li>
+        <%= link_to 'Account', edit_user_registration_path, style: "background-color:#E5E9F2; color:black;" %>
+      </li>
+      <li>
+        <%= link_to 'Logout', destroy_user_session_path, 'data-method' => 'delete', style:"background-color:#E5E9F2; color:black;" %>
       </li>
     </ul>
-
-    <ul class="pull-right">
-      <li class="hidden-screen-md">
-        <%= link_to 'Feed', users_path %>
-      </li>
-      <li class="hidden-screen-md">
-        <%= link_to 'Account', edit_user_registration_path %>
-      </li>
-      <li class="hidden-screen-md">
-        <%= link_to 'Logout', destroy_user_session_path, 'data-method' => 'delete' %>
-      </li>
-      <li class="visible-screen-md">
-        <a class="toggle-aside">
-          <i class="fa fa-bars"></i>
-        </a>
-      </li>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#" style="color:black;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
   </div>
+</div>
 </nav>
